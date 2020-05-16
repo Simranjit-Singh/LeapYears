@@ -7,6 +7,13 @@ public class LeapYearsTest {
 
     LeapYears leapYears = new LeapYears();
 
+    //To test the isLeapYear method with random number
+    @Test
+    public void isLeapYear(){
+        int year=2020;
+        System.out.println(leapYears.isLeapYear(year));
+    }
+
     //All years divisible by 400 ARE leap years
     @Test
     public void yearsDivisibleBy400(){
