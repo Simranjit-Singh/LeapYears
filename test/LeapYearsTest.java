@@ -7,6 +7,46 @@ public class LeapYearsTest {
 
     LeapYears leapYears = new LeapYears();
 
+    //All years divisible by 400 ARE leap years
+    @Test
+    public void yearsDivisibleBy400(){
+
+        int year=2000;
+        String expectedResult="Leap Year:"+year;
+
+        Assert.assertEquals(expectedResult,leapYears.isLeapYear(year));
+    }
+
+    //All years divisible by 100 but not by 400 are NOT leap years
+    @Test
+    public void yearsDivisibleBy100ButNotBy400(){
+
+        int year=1700;
+        String expectedResult="Non-Leap Year:"+year;
+
+        Assert.assertEquals(expectedResult,leapYears.isLeapYear(year));
+    }
+
+    //All years divisible by 4 but not by 100 ARE leap years
+    @Test
+    public void yearsDivisibleBy4ButNotBy400(){
+
+        int year=2008;
+        String expectedResult="Leap Year:"+year;
+
+        Assert.assertEquals(expectedResult,leapYears.isLeapYear(year));
+    }
+
+    //All years not divisible by 4 are NOT leap years
+    @Test
+    public void yearsDivisibleNotBy4(){
+
+        int year=2017;
+        String expectedResult="Non-Leap Year:"+year;
+
+        Assert.assertEquals(expectedResult,leapYears.isLeapYear(year));
+    }
+
     //year divisible by 400
     @Test
     public void isDivisibleBy400(){
