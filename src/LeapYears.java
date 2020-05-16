@@ -14,4 +14,8 @@ public class LeapYears {
     public boolean isDivisibleBy100(int year){
         return year % 100 == 0;
     }
+
+    public boolean isDivisibleBy4(int year){
+        return year % 4 == 0;
+    }
 }
